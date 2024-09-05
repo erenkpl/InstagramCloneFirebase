@@ -84,8 +84,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                     self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
                                 }
                                 else {
-                                    
-                                    // Hata yoksa fotoğraf yüklendikten sonra upload ekranını sıfırlayıp, kullanıcıyı feed'e götürmesi.
+                                    // Hata yoksa fotoğraf yüklendikten sonra upload ekranını sıfırlanması ve kullanıcıyı feed'e götürmesi.
                                     self.imageLabel.image = UIImage(named: "select")
                                     self.commentText.text = ""
                                     self.tabBarController?.selectedIndex = 0 // TabBar içinde 0. index'e (feed) götürülmesi.
