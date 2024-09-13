@@ -15,7 +15,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var commentText: UITextField!
-    @IBOutlet weak var shareOutlet: UIButton!
+    @IBOutlet weak var shareOutlet: UIButton! // Butonu gizleyip gösterebilmek için outlet oluşturdum.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +55,10 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func shareButton(_ sender: Any) {
         
         let storage = Storage.storage()
-        let storageRef = storage.reference() //Hangi klasörle çalışacağımızı, nereye kaydedeceğimizi belirtmek için. Ana klasöre referans verdik.
+        let storageRef = storage.reference() // Hangi klasörle çalışacağımızı, nereye kaydedeceğimizi belirtmek için. Ana klasöre referans verdik.
         let mediaFolder = storageRef.child("media") // Oluşturduğumuz klasöre erişebilmek için. Eğer dizinde girilen isimli klasör yoksa otomatik oluşturur.
         
-        // görselin olup olmadığını kontrol edip, eğer görsel varsa 0.5 sıkıştırarak data variable'ına kaydetmesi için.
+        // Görselin olup olmadığını kontrol edip, eğer görsel varsa 0.5 sıkıştırarak data variable'ına kaydetmesi için.
         if let data = imageLabel.image?.jpegData(compressionQuality: 0.5) {
             
             let uuid = UUID().uuidString //Hher kullandığımda benzersiz uydurma bir değer oluşturacak.
@@ -90,7 +90,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                     self.tabBarController?.selectedIndex = 0 // TabBar içinde 0. index'e (feed) götürülmesi.
                                 }
                             })
-                            
                         }
                     }
                 }
