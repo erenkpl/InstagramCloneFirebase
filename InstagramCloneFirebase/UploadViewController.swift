@@ -45,23 +45,24 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+    // Hata geldiğinde bildiri oluşturmak için fonksiyon.
     func makeAlert(titleInput: String, messageInput: String) {
         let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }
-    
+                                                    
     @IBAction func shareButton(_ sender: Any) {
         
         let storage = Storage.storage()
         let storageRef = storage.reference() // Hangi klasörle çalışacağımızı, nereye kaydedeceğimizi belirtmek için. Ana klasöre referans verdik.
         let mediaFolder = storageRef.child("media") // Oluşturduğumuz klasöre erişebilmek için. Eğer dizinde girilen isimli klasör yoksa otomatik oluşturur.
         
-        // Görselin olup olmadığını kontrol edip, eğer görsel varsa 0.5 sıkıştırarak data variable'ına kaydetmesi için.
+        // Görselin olup olmadığını kontrol edip, eğer görsel varsa 0.5 sıkıştırarak data variable'ına kaydetmesi için. Sıkıştırma işlemini çok yer kaplamaması için yaptım.
         if let data = imageLabel.image?.jpegData(compressionQuality: 0.5) {
             
-            let uuid = UUID().uuidString //Hher kullandığımda benzersiz uydurma bir değer oluşturacak.
+            let uuid = UUID().uuidString // Her kullandığımda benzersiz uydurma bir değer oluşturacak.
             
             let imageRef = mediaFolder.child("\(uuid).jpg") // Görselin kaydedileceği yer ve ismini ekledik.
             imageRef.putData(data) { metadata, error in

@@ -21,6 +21,7 @@
 		D1675F4D2C805F02006045CB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1675F4C2C805F02006045CB /* FeedViewController.swift */; };
 		D1675F4F2C805F0E006045CB /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1675F4E2C805F0E006045CB /* UploadViewController.swift */; };
 		D1675F512C805F19006045CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1675F502C805F19006045CB /* SettingsViewController.swift */; };
+		D1833C8B2C9437D400753464 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1833C8A2C9437D400753464 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D1675F4C2C805F02006045CB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		D1675F4E2C805F0E006045CB /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		D1675F502C805F19006045CB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D1833C8A2C9437D400753464 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				D1675F2F2C805733006045CB /* SceneDelegate.swift */,
 				D1675F312C805733006045CB /* ViewController.swift */,
 				D1675F4C2C805F02006045CB /* FeedViewController.swift */,
+				D1833C8A2C9437D400753464 /* FeedTableViewCell.swift */,
 				D1675F4E2C805F0E006045CB /* UploadViewController.swift */,
 				D1675F502C805F19006045CB /* SettingsViewController.swift */,
 				D1675F332C805733006045CB /* Main.storyboard */,
@@ -170,6 +173,7 @@
 			files = (
 				D1675F322C805733006045CB /* ViewController.swift in Sources */,
 				D1675F4F2C805F0E006045CB /* UploadViewController.swift in Sources */,
+				D1833C8B2C9437D400753464 /* FeedTableViewCell.swift in Sources */,
 				D1675F2E2C805733006045CB /* AppDelegate.swift in Sources */,
 				D1675F4D2C805F02006045CB /* FeedViewController.swift in Sources */,
 				D1675F302C805733006045CB /* SceneDelegate.swift in Sources */,
